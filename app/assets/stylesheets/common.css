@@ -1,0 +1,151 @@
+@charset "UTF-8";
+h4 {
+  font-size: 1.2rem; }
+
+.avatar {
+  cursor: pointer; }
+
+.modal-footer {
+  justify-content: center; }
+
+button a, button a:hover {
+  text-decoration: none;
+  color: #fff; }
+
+.center {
+  text-align: center; }
+
+.disaster_create_block, .disaster_confirm_block {
+  margin: 1rem 0 0 0;
+  padding: 1rem 0 0 0; }
+  .disaster_create_block div .text-align-r, .disaster_confirm_block div .text-align-r {
+    text-align: right;
+    margin-right: 0.5rem; }
+  .disaster_create_block div .text-align-l, .disaster_confirm_block div .text-align-l {
+    text-align: left; }
+
+.disaster_create_block {
+  border: thin solid #ffe4e1; }
+
+#users-table th {
+  min-width: 260px; }
+
+.disaster_block {
+  margin: 3rem 0 2rem 0; }
+  .disaster_block .text-align-r {
+    text-align: right;
+    margin-top: 0.3rem; }
+  .disaster_block .text-align-c {
+    text-align: center;
+    margin: 0; }
+  .disaster_block .text-align-l {
+    text-align: left;
+    margin-left: 2rem; }
+
+/* DataTablesのフィルタリングのためのレイアウト */
+tfoot {
+  display: table-header-group; }
+
+.safety_name_block .user-block img, .safety_name_block .user-block p {
+  display: inline-block; }
+.safety_name_block .user-block p {
+  margin-left: 1rem;
+  font-size: 1.5rem; }
+
+.safety_edit_block {
+  margin: 2rem 0 0 0; }
+
+.safety_contact_block {
+  margin: 1.5rem 0 0 0; }
+
+#waku-1, #waku-2 {
+  border: thin solid #ffe4e1;
+  padding: 0.5rem; }
+
+#waku-1 {
+  border-right: none; }
+
+#waku-2 {
+  border-left: none; }
+
+.btn-link-to {
+  border: none;
+  background-color: transparent;
+  color: #007BFF; }
+
+.btn-link-to:hover {
+  text-decoration: underline; }
+
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+/* スマートフォン（縦 sm）以下（576px未満）向け start 　　　　*/
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+@media (max-width: 577px) {
+  .navbar-brand {
+    font-size: 120%; }
+
+  h1 {
+    font-size: 160%; }
+
+  h3 {
+    font-size: 100%; }
+
+  h4 {
+    font-size: 90%; }
+
+  .disaster_create_block, .disaster_confirm_block {
+    margin: 0 0 1rem 0;
+    padding: 0 0 0.5rem 0; }
+    .disaster_create_block div .text-align-r, .disaster_create_block div .text-align-l, .disaster_confirm_block div .text-align-r, .disaster_confirm_block div .text-align-l {
+      text-align: center;
+      margin: 0; }
+    .disaster_create_block .lbl-name, .disaster_confirm_block .lbl-name {
+      margin: 0; }
+
+  .disaster_confirm_block {
+    margin: 1rem 0 0 0; }
+
+  .disaster_block {
+    margin: 1rem 0 0 0; }
+    .disaster_block .text-align-r, .disaster_block .text-align-l {
+      text-align: center; }
+    .disaster_block .text-align-l {
+      margin-left: 0; }
+
+  .safety_index_block {
+    margin: 0;
+    padding: 0; }
+    .safety_index_block tfoot {
+      display: none; }
+
+  /* DataTablesのフィルタリングのためのレイアウト */
+  #filter-box {
+    margin-top: 1rem;
+    padding: 0.5rem; }
+    #filter-box p {
+      display: inline-block;
+      margin: 0;
+      padding: 0.5rem; }
+    #filter-box select {
+      display: inline-block;
+      margin: 0 0.5rem 0 0; }
+
+  .disaster_block div {
+    margin: 0.5rem 0 0 0; }
+
+  .safety_name_block {
+    margin: 1rem auto 0 auto; }
+
+  #waku-1, #waku-2 {
+    border: thin solid #ffe4e1;
+    padding: 0.5rem; }
+
+  #waku-1 {
+    border-bottom: none; }
+
+  #waku-2 {
+    border-top: none; } }
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+/* スマートフォン（縦 sm）以下（576px未満）向け end   　　　　*/
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+
+/*# sourceMappingURL=common.css.map */
