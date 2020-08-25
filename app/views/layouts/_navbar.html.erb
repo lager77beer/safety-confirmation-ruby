@@ -1,0 +1,39 @@
+<header class="mb-3">
+    <nav class="navbar navbar-expand-sm navbar-dark"  style="background-color:#0000ff;"> 
+        <a class="navbar-brand" href="/">Safety Confirmation Easy</a>
+         
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#nav-bar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="nav-bar">
+            <ul class="navbar-nav mr-auto"></ul>
+            <ul class="navbar-nav">
+                <% if logged_in? %>
+                  <li class="nav-item dropdown">
+                    <% if current_user.admin == "9" %>
+                      <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><%= current_user.name %>（管理者）</a>
+                    <% else %>
+                      <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><%= current_user.name %></a>
+                    <% end %>
+                      <ul class="dropdown-menu dropdown-menu-right">
+                      <% if current_user.admin == "9" %>
+                        <li class="dropdown-item"><%= link_to '災害一覧', disasters_path %></li>
+                        <li class="dropdown-divider"></li>
+                      <% else %>
+                        <li class="dropdown-item"><%= link_to '安否登録', edit_safety_path(current_user.id) %></li>
+                        <li class="dropdown-divider"></li>
+                      <% end %>
+                        <li class="dropdown-item"><%= link_to 'ユーザー情報変更', edit_user_path(current_user) %></li>
+                        <li class="dropdown-divider"></li>
+                        <li class="dropdown-item"><%= button_to 'ログアウト', logout_path, method: :delete,class: "btn-link-to" %></li>
+                      </ul>
+                  </li>
+                <% else %>
+                  <li class="nav-item"><%= link_to '新規登録', signup_path, {class: "nav-link"} %></li>
+                  <li class="nav-item"><%= link_to 'ログイン', login_path, {class: "nav-link"} %></li>
+                <% end %>
+            </ul>
+        </div>
+    </nav>
+</header>

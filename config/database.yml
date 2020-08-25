@@ -48,7 +48,9 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: safety-confirmation-easy_production
   username: safety-confirmation-easy
   password: <%= ENV['SAFETY-CONFIRMATION-EASY_DATABASE_PASSWORD'] %>

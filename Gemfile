@@ -25,7 +25,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -53,3 +53,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Gemfile 追加（ページネーション）
 gem 'kaminari'
+# Gemfile 追加（エラーメッセージの日本語化）
+gem 'rails-i18n'
+
+# Gemfile 追加（Heroku 用の設定）
+group :production do
+  gem 'pg', '>= 0.18', '< 2.0'
+end

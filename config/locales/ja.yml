@@ -1,0 +1,13 @@
+ja:
+  activerecord:
+    models:
+      user: ユーザー
+      disaster: 災害
+      safety: 安否
+    attributes:
+      disaster:
+        name: 災害名称
+      safety:
+        myself: 安否
+        contact_information: 連絡事項
+        

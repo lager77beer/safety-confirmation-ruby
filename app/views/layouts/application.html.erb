@@ -1,15 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html  lang="ja">
   <head>
-    <title>SafetyConfirmationEasy</title>
+    <meta charset="utf-8">
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Safety Confirmation Easy</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- CSS -->
+    <%= stylesheet_link_tag  'normalize', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <!-- datatables -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.21/datatables.min.css"/>
+    <!-- オリジナル -->
+    <%= stylesheet_link_tag  'common', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <!-- Favicon -->
+    <%= favicon_link_tag('/favicon.ico') %>
   </head>
 
   <body>
-    <%= yield %>
+
+    <%= render 'layouts/navbar' %>
+
+    <div class="container">
+      <%= render 'layouts/flash_messages' %>
+      <%= yield %>
+    </div>
+
+    <!-- まずjQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- cloudflare -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <!-- bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <!-- datatables -->
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.21/datatables.min.js"></script>
+    <!-- fontawesome(アイコン) -->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
+    <!-- オリジナル -->
+    <%= javascript_include_tag 'common', 'data-turbolinks-track': 'reload' %>
   </body>
 </html>
