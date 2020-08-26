@@ -54,7 +54,7 @@ class SafetiesController < ApplicationController
     @safety = Safety.find(params[:id])
     if @safety.update(request_params)
       redirect_back fallback_location: root_path, flash: {       
-          danger: '安否情報は更新されました。',
+          success: '安否情報は更新されました。',
       }  and return
     else
       redirect_back fallback_location: root_path, flash: {       

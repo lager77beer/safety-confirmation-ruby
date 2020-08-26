@@ -17,7 +17,7 @@ class User < ApplicationRecord
 
   # 直近のsafety１つを取得
   def latestSafety
-      return Safety.where('user_id',self.id).order(updated_at: :desc).first
+      return Safety.where(user_id: self.id).order(updated_at: :desc).first
   end
 
 end

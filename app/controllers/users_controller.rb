@@ -34,7 +34,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
 
     if @user.update(request_params)
-      flash.now[:danger] = 'ユーザ情報を更新しました。'
+      flash.now[:success] = 'ユーザ情報を更新しました。'
       render :edit
     else
       flash.now[:danger] = 'ユーザ情報の更新は失敗しました。'

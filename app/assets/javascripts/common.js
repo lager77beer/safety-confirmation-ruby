@@ -28,7 +28,7 @@ const handleMediaQuery = function(mql) {
     }
 
     // 二回目以降の描画の場合、初期化が必要
-    if(document.URL.match(/indexByDisaster/)){
+    if(document.URL.match(/safeties/)){
         if (table_safety) {
             table_safety.state.clear();
             table_safety.destroy();
@@ -72,8 +72,8 @@ const disasterTable = () => {
     }); 
     // DataTables
     table_disaster = $("#disaster-table").DataTable({
-    // 3列目を降順にする ( [ [ 列番号, 昇順降順 ], ... ] の形式) 
-        order: [ [ 3, "desc" ] ],
+    // 2列目を降順にする ( [ [ 列番号, 昇順降順 ], ... ] の形式) 
+        order: [ [ 2, "desc" ] ],
         // 状態を保存する機能をつける
         stateSave: true,
         // 件数切替の値を10～50の10刻みにする
@@ -191,7 +191,7 @@ const disasterTableSmapho = () => {
     // DataTables
     table_disaster = $("#disaster-table").DataTable({
     // 3列目を降順にする ( [ [ 列番号, 昇順降順 ], ... ] の形式) 
-        order: [ [ 3, "desc" ] ],
+        order: [ [ 2, "desc" ] ],
         // 状態を保存する機能をつける
         stateSave: true,
         // 件数切替の値を10～50の10刻みにする
@@ -295,7 +295,7 @@ $('#btn-disaster-create').on('click', (e) => {
     var body ="";
 
     $(".mailto").each(function(i, emailTag) {
-        address += '"' + $(emailTag).text() + '",'; 
+        address += "'" + $(emailTag).text() + "',"; 
         console.log("emailTag=" + $(emailTag).text() + '; ');
         console.log("address=" + address);
     });
