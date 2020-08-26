@@ -295,7 +295,7 @@ $('#btn-disaster-create').on('click', (e) => {
     var body ="";
 
     $(".mailto").each(function(i, emailTag) {
-        address += "'" + $(emailTag).text() + "',"; 
+        address += $(emailTag).text() + ","; 
         console.log("emailTag=" + $(emailTag).text() + '; ');
         console.log("address=" + address);
     });
