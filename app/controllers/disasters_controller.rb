@@ -25,13 +25,19 @@ class DisastersController < ApplicationController
 
   # 災害登録確認
   def new
-    @disaster = Disaster.new
     @users = [];
 
     # getのURLパラメータを@disaster_nameにする。
     @disaster_name = {
       name: request_url_params,
     }
+    # バリデーション
+    @disaster = Disaster.new(@disaster_name)
+    unless @disaster.valid?
+      redirect_back fallback_location: root_path, flash: {       
+          warning: @disaster.errors.full_messages
+      }  and return
+    end
 
     # 全ユーザー（管理者以外）の安否をcreateする対象userを抽出する。
     allUsers = User.all(); 
